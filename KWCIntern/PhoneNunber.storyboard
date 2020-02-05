@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3aE-r9-diU">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Phone Nunber View Controller-->
+        <scene sceneID="ecg-g3-3FB">
+            <objects>
+                <viewController storyboardIdentifier="PhoneNunberViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3aE-r9-diU" customClass="PhoneNunberViewController" customModule="KWCIntern" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kvI-kl-TwP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XTi-cA-9Hu">
+                                <rect key="frame" x="115.5" y="269" width="183" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="183" id="siC-m8-w5d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="電話番号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Aq-hd-yaF">
+                                <rect key="frame" x="115.5" y="244" width="69.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFn-s2-MJm">
+                                <rect key="frame" x="157" y="353" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="cA0-hq-gQs"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onButtonTapped:" destination="3aE-r9-diU" eventType="touchUpInside" id="iuE-6Z-SSq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Aq-hd-yaF" firstAttribute="top" secondItem="yjE-gW-d0T" secondAttribute="top" constant="200" id="0OQ-bO-VdA"/>
+                            <constraint firstItem="UFn-s2-MJm" firstAttribute="centerX" secondItem="kvI-kl-TwP" secondAttribute="centerX" id="BLz-MI-uDV"/>
+                            <constraint firstItem="XTi-cA-9Hu" firstAttribute="top" secondItem="6Aq-hd-yaF" secondAttribute="bottom" constant="4" id="MPG-wZ-gdz"/>
+                            <constraint firstItem="UFn-s2-MJm" firstAttribute="top" secondItem="XTi-cA-9Hu" secondAttribute="bottom" constant="50" id="cer-Gj-ipf"/>
+                            <constraint firstItem="XTi-cA-9Hu" firstAttribute="centerX" secondItem="kvI-kl-TwP" secondAttribute="centerX" id="kkA-E8-CUy"/>
+                            <constraint firstItem="XTi-cA-9Hu" firstAttribute="leading" secondItem="6Aq-hd-yaF" secondAttribute="leading" id="vkq-2x-CKs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yjE-gW-d0T"/>
+                    </view>
+                    <connections>
+                        <outlet property="phoneNumberText" destination="XTi-cA-9Hu" id="wgj-MD-kGb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yn2-f5-lrI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-50" y="-131"/>
+        </scene>
+    </scenes>
+</document>
